@@ -1,6 +1,5 @@
 
 <div align="center">
-  <img src="URL_VERS_UN_LOGO_OU_UNE_IMAGE_REPRESENTATIVE" width="150px" alt="Project Logo">
   <h1>Moteur de Recherche Sémantique pour Documents Techniques</h1>
   <p>
     Une application full-stack qui transforme une collection d'articles de recherche et de blogs en une base de connaissances interrogeable en langage naturel.
