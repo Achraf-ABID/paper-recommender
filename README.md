@@ -1,14 +1,4 @@
-Absolument. Un `README.md` est la carte de visite de votre projet. Il doit être à la fois complet, clair et donner envie d'explorer votre travail.
 
-Voici un modèle de `README.md` très détaillé et professionnel, utilisant des badges, une structure claire et des explications approfondies. Il est conçu pour impressionner et guider parfaitement n'importe quel visiteur, qu'il soit recruteur ou développeur.
-
----
-
-**Action :** Copiez et collez l'intégralité de ce texte dans votre fichier `README.md`. Vous n'aurez qu'à remplacer quelques éléments entre crochets `[]`.
-
----
-
-```markdown
 <div align="center">
   <img src="URL_VERS_UN_LOGO_OU_UNE_IMAGE_REPRESENTATIVE" width="150px" alt="Project Logo">
   <h1>Moteur de Recherche Sémantique pour Documents Techniques</h1>
