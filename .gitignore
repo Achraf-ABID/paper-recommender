@@ -1,0 +1,33 @@
+# Fichiers de cache et compilés de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dossiers d'environnement virtuel
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Fichiers de configuration spécifiques à l'IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Fichiers de dépendances et de build
+*.egg-info/
+dist/
+build/
+wheels/
+*.egg
+
+# Fichiers de secrets (ne jamais commiter de clés d'API !)
+.env
+*.env.*
+secrets.toml
+
+# Dossiers de données (si les données sont trop volumineuses pour Git)
+data/
