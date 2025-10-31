@@ -374,7 +374,3 @@ Si vous voulez, je peux :
 - ajouter des captures d'écran et un GIF dans le README;
 - créer un `Dockerfile` et un `docker-compose.yml` minimal pour l'API + UI;
 - ajouter un template GitHub Actions pour tests et build d'image.
-
----
-
-Merci — dites-moi quelles sections (captures, Docker, CI, tests) je dois générer en priorité et je les ajoute directement au dépôt.
