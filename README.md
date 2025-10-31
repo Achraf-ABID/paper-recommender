@@ -179,43 +179,212 @@ Une nouvelle page devrait s'ouvrir automatiquement dans votre navigateur. Si ce 
 
 ```
 .
-├── data/               # (Ignoré par Git) Contient toutes les données générées.
-│   ├── raw/            # Données brutes (PDFs, JSONs de scraping).
-│   ├── normalized/     # Données structurées avec métadonnées.
-│   ├── processed/      # Corpus final nettoyé (processed_corpus.jsonl).
-│   └── embeddings/     # Index FAISS et mapping des IDs.
-├── scripts/            # Scripts autonomes pour le pipeline de données.
-│   ├── fetch_arxiv.py
-│   ├── fetch_blogs.py
-│   ├── preprocess_data.py
-│   ├── generate_embeddings.py
-│   └── search_engine.py # Script de test en ligne de commande.
-├── src/                # Code source de l'application.
-│   ├── api/
-│   │   └── main.py     # Logique du backend FastAPI.
-│   └── ui/
-│       └── app.py      # Logique du frontend Streamlit.
-├── .gitignore          # Spécifie les fichiers à ignorer par Git.
-├── README.md           # Ce fichier de documentation.
-└── requirements.txt    # Liste des dépendances Python pour la reproductibilité.
+"""
+Paper Recommender — Moteur de recommandation et recherche sémantique d'articles
+
+README professionnel, créatif et détaillé pour le dépôt `paper-recommender`.
+
+Objectif : documenter l'architecture, l'installation, l'usage, les scripts et fournir des pistes d'amélioration et de déploiement.
+"""
+
+## Vue d'ensemble
+
+Paper Recommender transforme des collections d'articles (arXiv, blogs techniques, PDFs) en une base de connaissances vectorielle, interrogeable en langage naturel.
+
+Ce README présente :
+
+- un guide d'installation complet (Windows PowerShell),
+- les commandes pour exécuter le pipeline et l'application,
+- une description des scripts et de la structure du dépôt,
+- des suggestions de production (Docker, CI/CD) et d'améliorations "out of the box".
+
+---
+
+### Badges (indicatifs)
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-%23009688?style=flat&logo=fastapi)
+![Streamlit](https://img.shields.io/badge/Streamlit-%23FF4B4B?style=flat&logo=streamlit)
+
+---
+
+## Table des matières
+
+1. Présentation
+2. Points forts
+3. Architecture technique
+4. Quick start (Windows PowerShell)
+5. Commandes & scripts expliqués
+6. Endpoints API — exemples
+7. Structure du dépôt
+8. Variables d'environnement & sécurité
+9. Tests, CI/CD et déploiement
+10. Idées avancées / Out-of-the-box
+11. Contribution & contact
+
+---
+
+## 1) Présentation
+
+Ce projet permet d'ingérer des documents, d'en extraire des passages pertinents, de calculer leurs embeddings, et d'indexer ces vecteurs pour une recherche sémantique rapide.
+
+Usages typiques : recherche documentaire, assistance à la rédaction, système de Q&A spécialisé, compagnon de lecture pour chercheurs.
+
+---
+
+## 2) Points forts
+
+- Pipeline modularisé et scriptable
+- Indexation via FAISS pour recherche vectorielle rapide
+- API FastAPI asynchrone pour intégration en production
+- UI Streamlit pour démonstration et tests rapides
+- Scripts réutilisables pour ingestion (ArXiv, blogs)
+
+---
+
+## 3) Architecture technique (résumé)
+
+- Ingestion → Prétraitement → Embeddings → FAISS Index → API → UI
+- Composants principaux :
+  - `scripts/` : pipeline d'ingestion et prétraitement
+  - `src/api/` : backend FastAPI
+  - `src/ui/` : application Streamlit
+
+---
+
+## 4) Quick start (Windows PowerShell)
+
+Positionnez-vous dans le dossier du projet :
+
+```powershell
+cd C:\Users\abida\Desktop\nlp
+```
+
+1) Créer et activer le virtualenv
+
+```powershell
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+2) Mettre à jour pip et installer les dépendances
+
+```powershell
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+3) (Optionnel) Installer Playwright si vous comptez lancer les fetchers qui en dépendent
+
+```powershell
+pip install playwright
+playwright install
+```
+
+4) Exécuter le pipeline (ordre recommandé)
+
+```powershell
+python scripts/fetch_arxiv.py       # collecte depuis arXiv
+python scripts/fetch_blogs.py      # collecte de blogs (si configuré)
+python scripts/preprocess_data.py  # extraction et nettoyage
+python scripts/generate_embeddings.py  # calcul embeddings + construction FAISS
+```
+
+5) Démarrer l'API (terminal 1)
+
+```powershell
+.\venv\Scripts\python.exe -m uvicorn src.api.main:app --reload
+```
+
+6) Démarrer l'UI Streamlit (terminal 2)
+
+```powershell
+streamlit run src/ui/app.py
 ```
 
 ---
 
-## 📈 Pistes d'Amélioration
+## 5) Commandes & scripts expliqués
 
-Ce projet est une fondation solide. Voici quelques pistes pour aller plus loin :
--   **Mise en Conteneurs :** Utiliser Docker et Docker Compose pour simplifier le déploiement.
--   **Amélioration du Modèle :** Tester des modèles d'embedding plus grands et plus performants pour une meilleure pertinence.
--   **Scalabilité de l'Index :** Remplacer `IndexFlatIP` par des index plus avancés de FAISS (comme `IndexIVFPQ`) pour gérer des millions de documents.
--   **Affinement du Modèle (Fine-tuning) :** Affiner le modèle d'embedding sur un ensemble de données spécifiques au domaine pour améliorer la pertinence.
--   **Augmentation du Corpus :** Ajouter davantage de sources de données (par exemple, d'autres blogs, des publications scientifiques, etc.).
+- `fetch_arxiv.py` : interroge l'API arXiv et sauvegarde métadonnées + PDF dans `data/raw/arxiv`.
+- `fetch_blogs.py` : télécharge des pages web ciblées et les stocke dans `data/raw/blogs`.
+- `preprocess_data.py` : convertit PDFs/HTML en texte nettoyé, normalise les métadonnées et produit un corpus prêt pour embedding.
+- `generate_embeddings.py` : calcule les embeddings pour chaque passage/document et construit l'index FAISS (sauvegarde disque).
+- `search_engine.py` : petit utilitaire pour effectuer des recherches locales sans démarrer le serveur (CLI).
+
+Conseil : exécutez d'abord `preprocess_data.py` puis `generate_embeddings.py` pour éviter des embeddings redondants.
 
 ---
 
-## 📄 Licence
+## 6) Endpoints API — exemples
 
-Ce projet est distribué sous la licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-*(Astuce : créez un fichier LICENSE à la racine et mettez-y le texte de la licence MIT)*
+- GET `/health` — renvoie { "status": "ok" }
+- POST `/search` — payload : `{ "query": "...", "k": 5 }` → renvoie résultats avec score et métadonnées
+
+Exemple (PowerShell / curl):
+
+```powershell
+curl -X POST http://127.0.0.1:8000/search -H "Content-Type: application/json" -d '{"query":"What is RAG?","k":5}'
+```
+
+---
+
+## 7) Structure du dépôt
 
 ```
+.
+├── data/                # (local) raw, processed, embeddings — à ignorer par git
+├── scripts/             # data pipeline
+├── src/
+│   ├── api/             # FastAPI
+│   └── ui/              # Streamlit
+├── requirements.txt
+├── Dockerfile (optionnel)
+└── README.md
+```
+
+---
+
+## 8) Variables d'environnement & sécurité
+
+- Utilisez un fichier `.env` pour stocker les clés (non versionné). Exemple :
+
+```
+OPENAI_API_KEY=
+MODEL_NAME=sentence-transformers/all-MiniLM-L6-v2
+```
+
+- Chargez via `python-dotenv` au démarrage de l'application.
+
+---
+
+## 9) Tests, CI/CD et déploiement
+
+- Ajouter des tests `pytest` pour `scripts/` et `src/`.
+- Workflow GitHub Actions suggéré : lint → tests → build Docker → push image (optional).
+- Déploiement conseillé : conteneuriser l'API et servir via un service managé (ECS, GCP Cloud Run, Azure App Service).
+
+---
+
+## 10) Idées avancées (out of the box)
+
+- Expliquer pourquoi un passage est retourné (explainability) : aligner tokens les plus contributifs.
+- Mode streaming pour l'UI : streaming des résultats dès qu'un score dépasse un seuil.
+- Système d'annotation collaborative : permettre aux utilisateurs d'étiqueter et d'améliorer la pertinence.
+
+---
+
+## 11) Contribution & contact
+
+- Forkez, créez une branche `feature/xxx` et ouvrez une PR.
+- Respectez la convention de commit (e.g. `feat:`, `fix:`, `chore:`).
+
+Si vous voulez, je peux :
+
+- ajouter des captures d'écran et un GIF dans le README;
+- créer un `Dockerfile` et un `docker-compose.yml` minimal pour l'API + UI;
+- ajouter un template GitHub Actions pour tests et build d'image.
+
+---
+
+Merci — dites-moi quelles sections (captures, Docker, CI, tests) je dois générer en priorité et je les ajoute directement au dépôt.
