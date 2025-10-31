@@ -1,0 +1,12 @@
+## Ignore debug/raw HTML files fetched from the web. These files often include inline JSON/HTML
+# and can trigger 'at-rule or selector expected' errors in stylelint when the editor
+# treats the whole file as CSS.
+data/debug/*.html
+data/raw/**/*.html
+data/**/*.html
+## Ignore debug/raw HTML files fetched from the web. These files often include inline JSON/HTML
+# and can trigger 'at-rule or selector expected' errors in stylelint when the editor
+# treats the whole file as CSS.
+data/debug/*.html
+data/raw/**/*.html
+data/**/*.html
