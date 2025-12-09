@@ -1,0 +1,21 @@
+{
+    "paper_id": "2510.26782v1",
+    "title": "Clone Deterministic 3D Worlds with Geometrically-Regularized World Models",
+    "authors": [
+        "Zaishuo Xia",
+        "Yukuan Lu",
+        "Xinyi Li",
+        "Yifan Xu",
+        "Yubei Chen"
+    ],
+    "summary": "A world model is an internal model that simulates how the world evolves.\nGiven past observations and actions, it predicts the future of both the\nembodied agent and its environment. Accurate world models are essential for\nenabling agents to think, plan, and reason effectively in complex, dynamic\nsettings. Despite rapid progress, current world models remain brittle and\ndegrade over long horizons. We argue that a central cause is representation\nquality: exteroceptive inputs (e.g., images) are high-dimensional, and lossy or\nentangled latents make dynamics learning unnecessarily hard. We therefore ask\nwhether improving representation learning alone can substantially improve\nworld-model performance. In this work, we take a step toward building a truly\naccurate world model by addressing a fundamental yet open problem: constructing\na model that can fully clone and overfit to a deterministic 3D world. We\npropose Geometrically-Regularized World Models (GRWM), which enforces that\nconsecutive points along a natural sensory trajectory remain close in latent\nrepresentation space. This approach yields significantly improved latent\nrepresentations that align closely with the true topology of the environment.\nGRWM is plug-and-play, requires only minimal architectural modification, scales\nwith trajectory length, and is compatible with diverse latent generative\nbackbones. Across deterministic 3D settings and long-horizon prediction tasks,\nGRWM significantly increases rollout fidelity and stability. Analyses show that\nits benefits stem from learning a latent manifold with superior geometric\nstructure. These findings support a clear takeaway: improving representation\nlearning is a direct and useful path to robust world models, delivering\nreliable long-horizon predictions without enlarging the dynamics module.",
+    "published_date": "2025-10-30T17:56:43+00:00",
+    "updated_date": "2025-10-30T17:56:43+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26782v1",
+    "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+    ],
+    "retrieved_at": "2025-10-31T14:32:27.568567"
+}

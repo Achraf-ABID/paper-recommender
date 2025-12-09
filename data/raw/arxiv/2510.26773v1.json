@@ -1,0 +1,20 @@
+{
+    "paper_id": "2510.26773v1",
+    "title": "Automated event generation for S-wave quarkonium and leptonium production in NRQCD and NRQED",
+    "authors": [
+        "Alice Colpani Serri",
+        "Chris A. Flett",
+        "Jean-Philippe Lansberg",
+        "Olivier Mattelaer",
+        "Hua-Sheng Shao",
+        "Lukas Simon"
+    ],
+    "summary": "We present an extension of the MadGraph5_aMC@NLO framework that enables the\nautomated calculation of leading-order cross sections for S-wave quarkonium and\nleptonium production within the non-relativistic QCD (NRQCD) and\nnon-relativistic QED (NRQED) factorisation formalisms. The framework has been\nvalidated against a variety of benchmark processes, demonstrating robustness\nand flexibility for phenomenological studies. A key advantage of this\nimplementation is its seamless integration with existing MadGraph5_aMC@NLO\nfeatures, allowing computations not only within the Standard Model but also in\na wide range of Beyond the Standard Model or Effective Field Theory scenarios\nvia a modified Universal Feynman Output (UFO) interface. Furthermore, the\nframework maintains compatibility with standard Monte Carlo event generators\nfor parton showering and hadronisation. Through numerous examples, we highlight\nthat theoretical studies of quarkonium processes require careful consideration:\nthe impact of subleading contributions is often difficult to predict using\nsimple counting arguments based solely on the hierarchy of couplings and\nvelocity-scaling rules.",
+    "published_date": "2025-10-30T17:53:48+00:00",
+    "updated_date": "2025-10-30T17:53:48+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26773v1",
+    "categories": [
+        "hep-ph"
+    ],
+    "retrieved_at": "2025-10-31T14:33:44.820285"
+}

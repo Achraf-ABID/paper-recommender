@@ -1,0 +1,18 @@
+{
+    "paper_id": "2510.26781v1",
+    "title": "ChartAB: A Benchmark for Chart Grounding & Dense Alignment",
+    "authors": [
+        "Aniruddh Bansal",
+        "Davit Soselia",
+        "Dang Nguyen",
+        "Tianyi Zhou"
+    ],
+    "summary": "Charts play an important role in visualization, reasoning, data analysis, and\nthe exchange of ideas among humans. However, existing vision-language models\n(VLMs) still lack accurate perception of details and struggle to extract\nfine-grained structures from charts. Such limitations in chart grounding also\nhinder their ability to compare multiple charts and reason over them. In this\npaper, we introduce a novel \"ChartAlign Benchmark (ChartAB)\" to provide a\ncomprehensive evaluation of VLMs in chart grounding tasks, i.e., extracting\ntabular data, localizing visualization elements, and recognizing various\nattributes from charts of diverse types and complexities. We design a JSON\ntemplate to facilitate the calculation of evaluation metrics specifically\ntailored for each grounding task. By incorporating a novel two-stage inference\nworkflow, the benchmark can further evaluate VLMs' capability to align and\ncompare elements/attributes across two charts. Our analysis of evaluations on\nseveral recent VLMs reveals new insights into their perception biases,\nweaknesses, robustness, and hallucinations in chart understanding. These\nfindings highlight the fine-grained discrepancies among VLMs in chart\nunderstanding tasks and point to specific skills that need to be strengthened\nin current models.",
+    "published_date": "2025-10-30T17:56:31+00:00",
+    "updated_date": "2025-10-30T17:56:31+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26781v1",
+    "categories": [
+        "cs.CV"
+    ],
+    "retrieved_at": "2025-10-31T14:33:26.395948"
+}

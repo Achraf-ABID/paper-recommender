@@ -1,0 +1,16 @@
+{
+    "paper_id": "2510.26801v1",
+    "title": "Resonating-valence-bond superconductor from small Fermi surface in twisted bilayer graphene",
+    "authors": [
+        "Jing-Yu Zhao",
+        "Ya-Hui Zhang"
+    ],
+    "summary": "Mechanism of superconductivity in twisted bilayer graphene (TBG) remains one\nof the central problems in strongly correlated topological systems. The most\nintriguing question is about the nature of the normal state: is the Cooper pair\nformed from small Fermi surface or large Fermi surface? In this work we point\nout the possibility of a symmetric pseudogap metal with small hole pockets,\ndubbed as second Fermi liquid (sFL). In the sFL phase at $\\nu=-2-x$, there is a\ntwo-component picture: two electrons mainly localize on the AA sites and form a\npaired singlet due to anti-Hund's coupling mediated by the optical phonon,\nwhile additional holes form small Fermi surfaces. The sFL phase corresponds to\nan intrinsically strongly interacting fixed point and violates the perturbative\nLuttinger theorem. We develop a unified framework to describe both a\nrenormalized Fermi liquid (FL) and an sFL phase. We propose that the normal\nstate of the TBG superconductor is the sFL phase, but it evolves toward the FL\nphase under increasing hole doping. The superconducting phase emerges from the\nsFL phase by transferring pairing of local moments to the mobile carriers.\nInterestingly, the superconducting gap can exhibit a nematic nodal\n$p_x$-pairing symmetry. This work provides, to our knowledge, the first unified\ntheory that explains both the pseudogap metal above $T_c$ and the two-gap\nnematic superconductivity below it.",
+    "published_date": "2025-10-30T17:59:54+00:00",
+    "updated_date": "2025-10-30T17:59:54+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26801v1",
+    "categories": [
+        "cond-mat.str-el"
+    ],
+    "retrieved_at": "2025-10-31T14:30:28.449423"
+}

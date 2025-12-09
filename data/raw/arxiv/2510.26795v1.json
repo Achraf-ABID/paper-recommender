@@ -1,0 +1,22 @@
+{
+    "paper_id": "2510.26795v1",
+    "title": "Scaling Image Geo-Localization to Continent Level",
+    "authors": [
+        "Philipp Lindenberger",
+        "Paul-Edouard Sarlin",
+        "Jan Hosang",
+        "Matteo Balice",
+        "Marc Pollefeys",
+        "Simon Lynen",
+        "Eduard Trulls"
+    ],
+    "summary": "Determining the precise geographic location of an image at a global scale\nremains an unsolved challenge. Standard image retrieval techniques are\ninefficient due to the sheer volume of images (>100M) and fail when coverage is\ninsufficient. Scalable solutions, however, involve a trade-off: global\nclassification typically yields coarse results (10+ kilometers), while\ncross-view retrieval between ground and aerial imagery suffers from a domain\ngap and has been primarily studied on smaller regions. This paper introduces a\nhybrid approach that achieves fine-grained geo-localization across a large\ngeographic expanse the size of a continent. We leverage a proxy classification\ntask during training to learn rich feature representations that implicitly\nencode precise location information. We combine these learned prototypes with\nembeddings of aerial imagery to increase robustness to the sparsity of\nground-level data. This enables direct, fine-grained retrieval over areas\nspanning multiple countries. Our extensive evaluation demonstrates that our\napproach can localize within 200m more than 68\\% of queries of a dataset\ncovering a large part of Europe. The code is publicly available at\nhttps://scaling-geoloc.github.io.",
+    "published_date": "2025-10-30T17:59:35+00:00",
+    "updated_date": "2025-10-30T17:59:35+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26795v1",
+    "categories": [
+        "cs.CV",
+        "cs.LG"
+    ],
+    "retrieved_at": "2025-10-31T14:31:25.290997"
+}

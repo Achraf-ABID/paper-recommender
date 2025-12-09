@@ -1,0 +1,17 @@
+{
+    "paper_id": "2512.05956v1",
+    "title": "Minimal two band model and experimental proposals to distinguish pairing mechanisms of the high-T$_c$ superconductor La$_3$Ni$_2$O$_7$",
+    "authors": [
+        "Zheng-Duo Fan",
+        "Ashvin Vishwanath"
+    ],
+    "summary": "The discovery of high-T$_c$ superconductivity in La$_3$Ni$_2$O$_7$ has opened the door to a new route to high temperature superconductivity, distinct from that in cuprates and iron-based materials. Yet, despite intense recent activity, we lack experimentally testable protocols for distinguishing between different pairing scenarios. In this Letter, we construct a minimal two-band model that reproduces the Fermi-surface topology observed in recent ARPES measurements and DFT calculations, and we analyze superconductivity arising from two distinct pairing mechanisms. We show that these mechanisms yield sharply different responses to an applied perpendicular electric field. Thus, La$_3$Ni$_2$O$_7$ offers the unique opportunity to cleanly distinguish between different pairing scenarios. Finally, we propose three concrete experimental proposals designed to distinguish these scenarios and thereby identify the pairing mechanism most relevant to the real material.",
+    "published_date": "2025-12-05T18:53:22+00:00",
+    "updated_date": "2025-12-05T18:53:22+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2512.05956v1",
+    "categories": [
+        "cond-mat.str-el",
+        "cond-mat.supr-con"
+    ],
+    "retrieved_at": "2025-12-08T22:39:10.541585"
+}

@@ -1,0 +1,26 @@
+{
+    "paper_id": "2510.26774v1",
+    "title": "Compact Accretion Disks in the Aftermath of Tidal Disruption Events: Parameter Inference from Joint X-ray Spectra and UV/Optical Photometry Fitting",
+    "authors": [
+        "M. Guolo",
+        "A. Mummery",
+        "S. van Velzen",
+        "S. Gezari",
+        "M. Nicholl",
+        "Y. Yao",
+        "M. Karmen",
+        "Y. Ajay",
+        "T. Wevers",
+        "N. LeBaron",
+        "R. Chornock"
+    ],
+    "summary": "We present a multi-wavelength analysis of 14 tidal disruption events\n(TDEs)-including an off-nuclear event associated with an ultra-compact dwarf\ngalaxy-selected for having available thermal X-ray spectra during their\nlate-time UV/optical plateau phase. We show that at these stages, the full\nspectral energy distribution - X-ray spectra and UV/optical photometry - is\nwell described by a compact, yet standard accretion disk, the same disk which\npowers the X-rays at all times. By fitting up to three three epochs per source\nwith a fully relativistic disk model, we show that many system properties can\nbe reliably recovered, including importantly the black hole mass\n($M_{\\bullet}$). These accretion-based $M_{\\bullet}$ values, which in this\nsample span nearly three orders of magnitude, are consistent with galactic\nscaling relations but are significantly more precise (68\\% credible interval $\n< \\pm 0.3$ dex) and physically motivated. Expected accretion scaling relations\n(e.g., $L_{Bol}^{ disk} / L_{Edd} \\propto T_p^4 \\propto M_{\\bullet}^{-1}$),\nTDE-specific physics correlations ($L_{plat} \\propto M_{\\bullet}^{2/3}$ and\n$R_{out}/r_g \\propto M_{\\bullet}^{-2/3}$) and black hole-host galaxy\ncorrelations ($M_{\\bullet}$-$M_{\\star}$ and $M_{\\bullet}$-$\\sigma_{\\star}$)\nnaturally emerge from the data and, for the first time, are self-consistently\nextended into the intermediate-mass (IMBH, $M_{\\bullet} < 10^{5}$) regime. We\ndiscuss the implications of these results for TDE physics and modeling. We also\nreview and discuss different methods for $M_{\\bullet}$ inference in TDEs, and\nfind that approaches based on physical models of the early-time UV/optical\nemission are not able to recover (at a statistically significant level) black\nhole-host galaxy scalings.",
+    "published_date": "2025-10-30T17:55:01+00:00",
+    "updated_date": "2025-10-30T17:55:01+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26774v1",
+    "categories": [
+        "astro-ph.HE",
+        "astro-ph.GA"
+    ],
+    "retrieved_at": "2025-10-31T14:33:39.887461"
+}

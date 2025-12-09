@@ -1,0 +1,20 @@
+{
+    "paper_id": "2510.26779v1",
+    "title": "Determination of the initial condition for the Balitsky-Kovchegov equation with transformers",
+    "authors": [
+        "Meisen Gao",
+        "Zhong-Bo Kang",
+        "Jani Penttala",
+        "Ding Yu Shao"
+    ],
+    "summary": "In the high-energy limit of QCD, scattering off nucleons and nuclei can be\ndescribed in terms of Wilson-line correlators whose energy dependence is\nperturbative. The energy dependence of the two-point correlator, called the\ndipole amplitude, is governed by the Balitsky-Kovchegov (BK) equation. The\ninitial condition for the BK equation can be fitted to the experimental data,\nwhich requires evolving the dipole amplitude for a large set of different\nparameter values. In this work, we train a transformer model to learn the\nenergy dependence of the dipole amplitude, skipping the time-consuming\nnumerical evaluation of the BK equation. The transformer predicts the learned\ndipole amplitude and the leading order inclusive deep inelastic scattering\ncross section very accurately, allowing for efficient fitting of the initial\ncondition to the experimental data. Using this setup, we fit the initial\ncondition of the BK equation to the inclusive deep inelastic scattering data\nfrom HERA and consider two different starting points $x_0$ for the evolution.\nWe find better agreement with the experimental data for a smaller $x_0$. This\nwork paves the way for future studies involving global fits of the dipole\namplitude at leading order and beyond.",
+    "published_date": "2025-10-30T17:55:57+00:00",
+    "updated_date": "2025-10-30T17:55:57+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26779v1",
+    "categories": [
+        "hep-ph",
+        "nucl-ex",
+        "nucl-th"
+    ],
+    "retrieved_at": "2025-10-31T14:33:34.582940"
+}

@@ -1,0 +1,18 @@
+{
+    "paper_id": "2510.26784v1",
+    "title": "LLMs Process Lists With General Filter Heads",
+    "authors": [
+        "Arnab Sen Sharma",
+        "Giordano Rogers",
+        "Natalie Shapira",
+        "David Bau"
+    ],
+    "summary": "We investigate the mechanisms underlying a range of list-processing tasks in\nLLMs, and we find that LLMs have learned to encode a compact, causal\nrepresentation of a general filtering operation that mirrors the generic\n\"filter\" function of functional programming. Using causal mediation analysis on\na diverse set of list-processing tasks, we find that a small number of\nattention heads, which we dub filter heads, encode a compact representation of\nthe filtering predicate in their query states at certain tokens. We demonstrate\nthat this predicate representation is general and portable: it can be extracted\nand reapplied to execute the same filtering operation on different collections,\npresented in different formats, languages, or even in tasks. However, we also\nidentify situations where transformer LMs can exploit a different strategy for\nfiltering: eagerly evaluating if an item satisfies the predicate and storing\nthis intermediate result as a flag directly in the item representations. Our\nresults reveal that transformer LMs can develop human-interpretable\nimplementations of abstract computational operations that generalize in ways\nthat are surprisingly similar to strategies used in traditional functional\nprogramming patterns.",
+    "published_date": "2025-10-30T17:57:17+00:00",
+    "updated_date": "2025-10-30T17:57:17+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26784v1",
+    "categories": [
+        "cs.AI"
+    ],
+    "retrieved_at": "2025-10-31T14:32:20.849637"
+}

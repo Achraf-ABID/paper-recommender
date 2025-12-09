@@ -1,0 +1,18 @@
+{
+    "paper_id": "2510.26798v1",
+    "title": "Spin Polarons in Flat Band Ferromagnets",
+    "authors": [
+        "Saranesh Prembabu",
+        "Rahul Sahay",
+        "Stefan Divic",
+        "Ashvin Vishwanath"
+    ],
+    "summary": "Spin polarons are bound states of electrons and spin-flips that form above\nspin polarized electronic insulators.These bound states conventionally form in\none of two settings: in frustrated lattices with dispersive bands -- where the\nmotion of an electron preferences binding a nearby spin-flip -- or in\ntopological flat bands -- where the Chern number enforces an effective dipolar\ninteraction between electrons and spin flips. In this work, we report the\nformation of a spin polaron in a context that doesn't fall cleanly into either\nof these paradigms. In particular, we study the one-dimensional Mielke-Tasaki\nchain, a paradigmatic model of flat band ferromagnetism, which has an exact\nferromagnetic ground state, trivial band topology, and quenched kinetic energy\nin its lowest band. Despite these features, our density matrix renormalization\ngroup simulations reveal the presence of spin polarons upon electron doping\nthis model. More surprisingly, combining these numerics with analytic\ncalculations, we show that polaron binding occurs when the interaction-induced\nkinetic energy of the model is zero -- contrary to intuition from kinetic\nmagnetism -- and the glue binding the electrons and spin-flips arises from weak\nmixing with the model's dispersive band -- contrary to what occurs in\ntopological flat bands. Our results open the doors to exploring how the quantum\ngeometry of flat bands drives the formation of exotic charge carriers.",
+    "published_date": "2025-10-30T17:59:42+00:00",
+    "updated_date": "2025-10-30T17:59:42+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26798v1",
+    "categories": [
+        "cond-mat.str-el"
+    ],
+    "retrieved_at": "2025-10-31T14:30:46.281251"
+}

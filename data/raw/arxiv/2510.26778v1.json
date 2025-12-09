@@ -1,0 +1,20 @@
+{
+    "paper_id": "2510.26778v1",
+    "title": "Surpassing state of the art on AMD area estimation from RGB fundus images through careful selection of U-Net architectures and loss functions for class imbalance",
+    "authors": [
+        "Valentyna Starodub",
+        "Mantas Lukoševičius"
+    ],
+    "summary": "Age-related macular degeneration (AMD) is one of the leading causes of\nirreversible vision impairment in people over the age of 60. This research\nfocuses on semantic segmentation for AMD lesion detection in RGB fundus images,\na non-invasive and cost-effective imaging technique. The results of the ADAM\nchallenge - the most comprehensive AMD detection from RGB fundus images\nresearch competition and open dataset to date - serve as a benchmark for our\nevaluation. Taking the U-Net connectivity as a base of our framework, we\nevaluate and compare several approaches to improve the segmentation model's\narchitecture and training pipeline, including pre-processing techniques,\nencoder (backbone) deep network types of varying complexity, and specialized\nloss functions to mitigate class imbalances on image and pixel levels. The main\noutcome of this research is the final configuration of the AMD detection\nframework, which outperforms all the prior ADAM challenge submissions on the\nmulti-class segmentation of different AMD lesion types in non-invasive RGB\nfundus images. The source code used to conduct the experiments presented in\nthis paper is made freely available.",
+    "published_date": "2025-10-30T17:55:46+00:00",
+    "updated_date": "2025-10-30T17:55:46+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26778v1",
+    "categories": [
+        "cs.CV",
+        "cs.LG",
+        "eess.IV",
+        "68T07, 68T05, 68T45, 92C55",
+        "I.2.6; J.3"
+    ],
+    "retrieved_at": "2025-10-31T14:33:35.965952"
+}

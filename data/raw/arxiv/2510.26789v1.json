@@ -1,0 +1,17 @@
+{
+    "paper_id": "2510.26789v1",
+    "title": "Entanglement-assisted circuit knitting",
+    "authors": [
+        "Shao-Hua Hu",
+        "Po-Sung Liu",
+        "Jun-Yi Wu"
+    ],
+    "summary": "Distributed quantum computing (DQC) provides a promising route toward\nscalable quantum computation, where entanglement-assisted LOCC and circuit\nknitting represent two complementary approaches. The former deterministically\nrealizes nonlocal operations but demands extensive entanglement resources,\nwhereas the latter requires no entanglement yet suffers from exponential\nsampling overhead. Here, we propose a hybrid framework that integrates these\ntwo paradigms by performing circuit knitting assisted with a limited amount of\nentanglement. We establish a general theoretical formulation that yields lower\nbounds on the optimal sampling overhead and present a constructive protocol\ndemonstrating that a single shared Bell pair can reduce the overhead to the\nasymptotic limit of standard circuit knitting without requiring classical\ncommunication. This hybrid approach enhances both sampling and entanglement\nefficiency, enabling more resource-practical implementations of distributed\nquantum computation.",
+    "published_date": "2025-10-30T17:58:13+00:00",
+    "updated_date": "2025-10-30T17:58:13+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26789v1",
+    "categories": [
+        "quant-ph"
+    ],
+    "retrieved_at": "2025-10-31T14:31:54.846740"
+}

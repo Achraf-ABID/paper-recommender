@@ -1,0 +1,26 @@
+{
+    "paper_id": "2510.26802v1",
+    "title": "Are Video Models Ready as Zero-Shot Reasoners? An Empirical Study with the MME-CoF Benchmark",
+    "authors": [
+        "Ziyu Guo",
+        "Xinyan Chen",
+        "Renrui Zhang",
+        "Ruichuan An",
+        "Yu Qi",
+        "Dongzhi Jiang",
+        "Xiangtai Li",
+        "Manyuan Zhang",
+        "Hongsheng Li",
+        "Pheng-Ann Heng"
+    ],
+    "summary": "Recent video generation models can produce high-fidelity, temporally coherent\nvideos, indicating that they may encode substantial world knowledge. Beyond\nrealistic synthesis, they also exhibit emerging behaviors indicative of visual\nperception, modeling, and manipulation. Yet, an important question still\nremains: Are video models ready to serve as zero-shot reasoners in challenging\nvisual reasoning scenarios? In this work, we conduct an empirical study to\ncomprehensively investigate this question, focusing on the leading and popular\nVeo-3. We evaluate its reasoning behavior across 12 dimensions, including\nspatial, geometric, physical, temporal, and embodied logic, systematically\ncharacterizing both its strengths and failure modes. To standardize this study,\nwe curate the evaluation data into MME-CoF, a compact benchmark that enables\nin-depth and thorough assessment of Chain-of-Frame (CoF) reasoning. Our\nfindings reveal that while current video models demonstrate promising reasoning\npatterns on short-horizon spatial coherence, fine-grained grounding, and\nlocally consistent dynamics, they remain limited in long-horizon causal\nreasoning, strict geometric constraints, and abstract logic. Overall, they are\nnot yet reliable as standalone zero-shot reasoners, but exhibit encouraging\nsigns as complementary visual engines alongside dedicated reasoning models.\nProject page: https://video-cof.github.io",
+    "published_date": "2025-10-30T17:59:55+00:00",
+    "updated_date": "2025-10-30T17:59:55+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26802v1",
+    "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+    ],
+    "retrieved_at": "2025-10-31T14:30:06.685812"
+}

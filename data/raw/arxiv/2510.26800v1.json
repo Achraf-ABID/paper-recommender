@@ -1,0 +1,23 @@
+{
+    "paper_id": "2510.26800v1",
+    "title": "OmniX: From Unified Panoramic Generation and Perception to Graphics-Ready 3D Scenes",
+    "authors": [
+        "Yukun Huang",
+        "Jiwen Yu",
+        "Yanning Zhou",
+        "Jianan Wang",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Xihui Liu"
+    ],
+    "summary": "There are two prevalent ways to constructing 3D scenes: procedural generation\nand 2D lifting. Among them, panorama-based 2D lifting has emerged as a\npromising technique, leveraging powerful 2D generative priors to produce\nimmersive, realistic, and diverse 3D environments. In this work, we advance\nthis technique to generate graphics-ready 3D scenes suitable for physically\nbased rendering (PBR), relighting, and simulation. Our key insight is to\nrepurpose 2D generative models for panoramic perception of geometry, textures,\nand PBR materials. Unlike existing 2D lifting approaches that emphasize\nappearance generation and ignore the perception of intrinsic properties, we\npresent OmniX, a versatile and unified framework. Based on a lightweight and\nefficient cross-modal adapter structure, OmniX reuses 2D generative priors for\na broad range of panoramic vision tasks, including panoramic perception,\ngeneration, and completion. Furthermore, we construct a large-scale synthetic\npanorama dataset containing high-quality multimodal panoramas from diverse\nindoor and outdoor scenes. Extensive experiments demonstrate the effectiveness\nof our model in panoramic visual perception and graphics-ready 3D scene\ngeneration, opening new possibilities for immersive and physically realistic\nvirtual world generation.",
+    "published_date": "2025-10-30T17:59:51+00:00",
+    "updated_date": "2025-10-30T17:59:51+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26800v1",
+    "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+    ],
+    "retrieved_at": "2025-10-31T14:30:32.173852"
+}

@@ -1,0 +1,18 @@
+{
+    "paper_id": "2510.26777v1",
+    "title": "Pre-trained Forecasting Models: Strong Zero-Shot Feature Extractors for Time Series Classification",
+    "authors": [
+        "Andreas Auer",
+        "Daniel Klotz",
+        "Sebastinan Böck",
+        "Sepp Hochreiter"
+    ],
+    "summary": "Recent research on time series foundation models has primarily focused on\nforecasting, leaving it unclear how generalizable their learned representations\nare. In this study, we examine whether frozen pre-trained forecasting models\ncan provide effective representations for classification. To this end, we\ncompare different representation extraction strategies and introduce two\nmodel-agnostic embedding augmentations. Our experiments show that the best\nforecasting models achieve classification accuracy that matches or even\nsurpasses that of state-of-the-art models pre-trained specifically for\nclassification. Moreover, we observe a positive correlation between forecasting\nand classification performance. These findings challenge the assumption that\ntask-specific pre-training is necessary, and suggest that learning to forecast\nmay provide a powerful route toward constructing general-purpose time series\nfoundation models.",
+    "published_date": "2025-10-30T17:55:23+00:00",
+    "updated_date": "2025-10-30T17:55:23+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26777v1",
+    "categories": [
+        "cs.LG"
+    ],
+    "retrieved_at": "2025-10-31T14:33:37.681089"
+}

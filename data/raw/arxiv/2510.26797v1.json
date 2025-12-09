@@ -1,0 +1,16 @@
+{
+    "paper_id": "2510.26797v1",
+    "title": "Cavity-assisted single-shot T center spin readout",
+    "authors": [
+        "Yu-En Wong",
+        "Songtao Chen"
+    ],
+    "summary": "High-fidelity spin readout is a crucial component for quantum information\nprocessing with optically interfaced solid-state spins. Here, we propose and\ninvestigate two theoretical protocols for fast single-shot readout of\ncavity-coupled single T center electronic spins. For fluorescence-based\nreadout, we selectively couple one of the T center spin-conserving transitions\nto a single-mode photonic cavity, exploiting the enhancement of the\nfluorescence emission and cyclicity. For reflection-based readout, we leverage\nthe spin-dependent cavity reflection contrast to generate the qubit readout\nsignal. We show that the cavity reflection approach enables high-fidelity spin\nreadout even when the T center only has a modest cyclicity. With realistic\nsystem parameters, such as cavity quality factor $Q = 2\\times10^5$ and T center\noptical linewidth $\\Gamma/2\\pi = 100$ MHz, we calculate a single-shot readout\nfidelity exceeding 99% within 8.7 $\\mu$s for both spin readout protocols.",
+    "published_date": "2025-10-30T17:59:41+00:00",
+    "updated_date": "2025-10-30T17:59:41+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26797v1",
+    "categories": [
+        "quant-ph"
+    ],
+    "retrieved_at": "2025-10-31T14:30:48.341391"
+}

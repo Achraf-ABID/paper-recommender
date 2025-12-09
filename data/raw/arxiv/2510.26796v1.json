@@ -1,0 +1,26 @@
+{
+    "paper_id": "2510.26796v1",
+    "title": "SEE4D: Pose-Free 4D Generation via Auto-Regressive Video Inpainting",
+    "authors": [
+        "Dongyue Lu",
+        "Ao Liang",
+        "Tianxin Huang",
+        "Xiao Fu",
+        "Yuyang Zhao",
+        "Baorui Ma",
+        "Liang Pan",
+        "Wei Yin",
+        "Lingdong Kong",
+        "Wei Tsang Ooi",
+        "Ziwei Liu"
+    ],
+    "summary": "Immersive applications call for synthesizing spatiotemporal 4D content from\ncasual videos without costly 3D supervision. Existing video-to-4D methods\ntypically rely on manually annotated camera poses, which are labor-intensive\nand brittle for in-the-wild footage. Recent warp-then-inpaint approaches\nmitigate the need for pose labels by warping input frames along a novel camera\ntrajectory and using an inpainting model to fill missing regions, thereby\ndepicting the 4D scene from diverse viewpoints. However, this\ntrajectory-to-trajectory formulation often entangles camera motion with scene\ndynamics and complicates both modeling and inference. We introduce SEE4D, a\npose-free, trajectory-to-camera framework that replaces explicit trajectory\nprediction with rendering to a bank of fixed virtual cameras, thereby\nseparating camera control from scene modeling. A view-conditional video\ninpainting model is trained to learn a robust geometry prior by denoising\nrealistically synthesized warped images and to inpaint occluded or missing\nregions across virtual viewpoints, eliminating the need for explicit 3D\nannotations. Building on this inpainting core, we design a spatiotemporal\nautoregressive inference pipeline that traverses virtual-camera splines and\nextends videos with overlapping windows, enabling coherent generation at\nbounded per-step complexity. We validate See4D on cross-view video generation\nand sparse reconstruction benchmarks. Across quantitative metrics and\nqualitative assessments, our method achieves superior generalization and\nimproved performance relative to pose- or trajectory-conditioned baselines,\nadvancing practical 4D world modeling from casual videos.",
+    "published_date": "2025-10-30T17:59:39+00:00",
+    "updated_date": "2025-10-30T17:59:39+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26796v1",
+    "categories": [
+        "cs.CV",
+        "cs.GR"
+    ],
+    "retrieved_at": "2025-10-31T14:30:50.584449"
+}

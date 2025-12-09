@@ -1,0 +1,18 @@
+{
+    "paper_id": "2510.26785v1",
+    "title": "The Library of Exoplanet Atmospheric Composition Measurements: Population Level Trends in Exoplanet Composition with ExoComp",
+    "authors": [
+        "Joshua D. Lothringer",
+        "Nataliea Lowson",
+        "Guangwei Fu"
+    ],
+    "summary": "The present-day bulk elemental composition of an exoplanet can provide\ninsight into a planet's formation and evolutionary history. Such information is\nnow being measured for dozens of planets with state-of-the-art facilities using\nBayesian atmosphere retrievals. We collect measurements of exoplanet\ncomposition of gas giants into a Library of Exoplanet Atmospheric Composition\nMeasurements for comparison on a population level. We develop an open-source\ntoolkit, ExoComp, to standardize between solar abundance, metallicity, and C/O\nratio definitions. We find a systematic enhancement in the metallicity of\nexoplanets compared to T-dwarf and stellar populations, a strict bound in C/O\nbetween 0 and 1, and statistically significant differences between measurements\nfrom direct, eclipse, and transmission spectroscopy. In particular, the transit\nspectroscopy population exhibits a systematically lower C/O ratio compared to\nplanets observed with eclipse and direct spectroscopy. While such differences\nmay be astrophysical signals, we discuss many of the challenges and subtleties\nof such a comparison. We characterize the mass-metallicity trend, finding a\nslope consistent between planets measured in transit versus eclipse, but offset\nin metallicity. Compared to the Solar System and constraints from interior\nmodeling, gas giant atmospheres appear to exhibit a steeper mass-metallicity\ntrend. We hope that the tools available in ExoComp and the data in the Library\nof Exoplanet Atmospheric Composition Measurements can enhance the science\nreturn of the wide-array of space- and ground-based exoplanet science being\nundertaken by the community.",
+    "published_date": "2025-10-30T17:57:24+00:00",
+    "updated_date": "2025-10-30T17:57:24+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26785v1",
+    "categories": [
+        "astro-ph.EP",
+        "astro-ph.IM"
+    ],
+    "retrieved_at": "2025-10-31T14:32:16.202746"
+}

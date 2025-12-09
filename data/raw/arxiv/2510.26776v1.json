@@ -1,0 +1,19 @@
+{
+    "paper_id": "2510.26776v1",
+    "title": "Faithful and Fast Influence Function via Advanced Sampling",
+    "authors": [
+        "Jungyeon Koh",
+        "Hyeonsu Lyu",
+        "Jonggyu Jang",
+        "Hyun Jong Yang"
+    ],
+    "summary": "How can we explain the influence of training data on black-box models?\nInfluence functions (IFs) offer a post-hoc solution by utilizing gradients and\nHessians. However, computing the Hessian for an entire dataset is\nresource-intensive, necessitating a feasible alternative. A common approach\ninvolves randomly sampling a small subset of the training data, but this method\noften results in highly inconsistent IF estimates due to the high variance in\nsample configurations. To address this, we propose two advanced sampling\ntechniques based on features and logits. These samplers select a small yet\nrepresentative subset of the entire dataset by considering the stochastic\ndistribution of features or logits, thereby enhancing the accuracy of IF\nestimations. We validate our approach through class removal experiments, a\ntypical application of IFs, using the F1-score to measure how effectively the\nmodel forgets the removed class while maintaining inference consistency on the\nremaining classes. Our method reduces computation time by 30.1% and memory\nusage by 42.2%, or improves the F1-score by 2.5% compared to the baseline.",
+    "published_date": "2025-10-30T17:55:19+00:00",
+    "updated_date": "2025-10-30T17:55:19+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26776v1",
+    "categories": [
+        "cs.LG",
+        "cs.AI"
+    ],
+    "retrieved_at": "2025-10-31T14:33:38.854981"
+}

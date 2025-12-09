@@ -1,0 +1,17 @@
+{
+    "paper_id": "2512.05957v1",
+    "title": "Consequences of Kernel Regularity for Bandit Optimization",
+    "authors": [
+        "Madison Lee",
+        "Tara Javidi"
+    ],
+    "summary": "In this work we investigate the relationship between kernel regularity and algorithmic performance in the bandit optimization of RKHS functions. While reproducing kernel Hilbert space (RKHS) methods traditionally rely on global kernel regressors, it is also common to use a smoothness-based approach that exploits local approximations. We show that these perspectives are deeply connected through the spectral properties of isotropic kernels. In particular, we characterize the Fourier spectra of the Matérn, square-exponential, rational-quadratic, $γ$-exponential, piecewise-polynomial, and Dirichlet kernels, and show that the decay rate determines asymptotic regret from both viewpoints. For kernelized bandit algorithms, spectral decay yields upper bounds on the maximum information gain, governing worst-case regret, while for smoothness-based methods, the same decay rates establish Hölder space embeddings and Besov space norm-equivalences, enabling local continuity analysis. These connections show that kernel-based and locally adaptive algorithms can be analyzed within a unified framework. This allows us to derive explicit regret bounds for each kernel family, obtaining novel results in several cases and providing improved analysis for others. Furthermore, we analyze LP-GP-UCB, an algorithm that combines both approaches, augmenting global Gaussian process surrogates with local polynomial estimators. While the hybrid approach does not uniformly dominate specialized methods, it achieves order-optimality across multiple kernel families.",
+    "published_date": "2025-12-05T18:54:09+00:00",
+    "updated_date": "2025-12-05T18:54:09+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2512.05957v1",
+    "categories": [
+        "stat.ML",
+        "cs.LG"
+    ],
+    "retrieved_at": "2025-12-08T22:39:07.964396"
+}

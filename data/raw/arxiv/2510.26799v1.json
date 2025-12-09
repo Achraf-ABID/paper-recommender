@@ -1,0 +1,17 @@
+{
+    "paper_id": "2510.26799v1",
+    "title": "Masked Diffusion Captioning for Visual Feature Learning",
+    "authors": [
+        "Chao Feng",
+        "Zihao Wei",
+        "Andrew Owens"
+    ],
+    "summary": "We learn visual features by captioning images with an image-conditioned\nmasked diffusion language model, a formulation we call masked diffusion\ncaptioning (MDC). During training, text tokens in each image-caption pair are\nmasked at a randomly chosen ratio, and a decoder conditioned on visual features\nis trained to reconstruct the original text. After training, the learned visual\nfeatures can be applied to downstream vision tasks. Unlike autoregressive\ncaptioning, the strength of the visual learning signal in MDC does not depend\non each token's position in the sequence, reducing the need for auxiliary\nobjectives. Linear probing experiments across a variety of academic-scale\nmodels and datasets show that the learned visual features are competitive with\nthose produced by autoregressive and contrastive approaches.",
+    "published_date": "2025-10-30T17:59:46+00:00",
+    "updated_date": "2025-10-30T17:59:46+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26799v1",
+    "categories": [
+        "cs.CV"
+    ],
+    "retrieved_at": "2025-10-31T14:30:42.726869"
+}

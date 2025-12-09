@@ -1,0 +1,28 @@
+{
+    "paper_id": "2510.26790v1",
+    "title": "Gistify! Codebase-Level Understanding via Runtime Execution",
+    "authors": [
+        "Hyunji Lee",
+        "Minseon Kim",
+        "Chinmay Singh",
+        "Matheus Pereira",
+        "Atharv Sonwane",
+        "Isadora White",
+        "Elias Stengel-Eskin",
+        "Mohit Bansal",
+        "Zhengyan Shi",
+        "Alessandro Sordoni",
+        "Marc-Alexandre Côté",
+        "Xingdi Yuan",
+        "Lucas Caccia"
+    ],
+    "summary": "As coding agents are increasingly deployed in large codebases, the need to\nautomatically design challenging, codebase-level evaluation is central. We\npropose Gistify, a task where a coding LLM must create a single, minimal,\nself-contained file that can reproduce a specific functionality of a codebase.\nThe coding LLM is given full access to a codebase along with a specific\nentrypoint (e.g., a python command), and the generated file must replicate the\noutput of the same command ran under the full codebase, while containing only\nthe essential components necessary to execute the provided command. Success on\nGistify requires both structural understanding of the codebase, accurate\nmodeling of its execution flow as well as the ability to produce potentially\nlarge code patches. Our findings show that current state-of-the-art models\nstruggle to reliably solve Gistify tasks, especially ones with long executions\ntraces.",
+    "published_date": "2025-10-30T17:58:26+00:00",
+    "updated_date": "2025-10-30T17:58:26+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26790v1",
+    "categories": [
+        "cs.CL",
+        "cs.AI"
+    ],
+    "retrieved_at": "2025-10-31T14:31:53.581305"
+}

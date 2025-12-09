@@ -10,7 +10,7 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 
 # --- CONFIGURATION ---
 BLOG_URLS = [
-    "https://medium.com/towards-data-science/a-gentle-introduction-to-retrieval-augmented-generation-35fde2a45b73",
+    # Note: Medium.com URL removed - post not accessible (404 or paywall)
     "https://huggingface.co/blog/gemma",
     "https://aws.amazon.com/fr/blogs/machine-learning/question-answering-using-retrieval-augmented-generation-with-foundation-models-in-amazon-sagemaker-jumpstart/"
 ]
@@ -74,10 +74,56 @@ def get_html_and_save_debug(url: str, debug_filepath: str) -> str:
     ]
     
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        # Configuration améliorée pour éviter la détection de bots
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--disable-dev-shm-usage',
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-web-security',
+                '--disable-features=IsolateOrigins,site-per-process'
+            ]
         )
+        context = browser.new_context(
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            viewport={'width': 1920, 'height': 1080},
+            locale='en-US',
+            timezone_id='America/New_York',
+            extra_http_headers={
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Connection': 'keep-alive',
+                'Upgrade-Insecure-Requests': '1',
+                'Sec-Fetch-Dest': 'document',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Site': 'none',
+                'Sec-Fetch-User': '?1',
+                'Cache-Control': 'max-age=0',
+            }
+        )
+        
+        # Ajouter des propriétés pour masquer les traces de bot
+        context.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {
+                get: () => undefined
+            });
+            
+            window.chrome = {
+                runtime: {}
+            };
+            
+            Object.defineProperty(navigator, 'plugins', {
+                get: () => [1, 2, 3, 4, 5]
+            });
+            
+            Object.defineProperty(navigator, 'languages', {
+                get: () => ['en-US', 'en']
+            });
+        """)
+        
         page = context.new_page()
         
         # Essayer chaque stratégie
@@ -86,15 +132,34 @@ def get_html_and_save_debug(url: str, debug_filepath: str) -> str:
                 print(f"  [INFO] Tentative avec stratégie: {strategy['name']}...")
                 page.goto(url, timeout=strategy['timeout'], wait_until=strategy['wait'])
                 
-                # Attendre le contenu dynamique
-                page.wait_for_timeout(3000)
+                # Attendre le contenu dynamique plus longtemps pour Medium
+                page.wait_for_timeout(5000)
                 
-                # Scroll pour lazy loading
+                # Scroll progressif pour simuler un humain et charger le contenu lazy
                 try:
-                    page.evaluate("window.scrollTo(0, document.body.scrollHeight / 2)")
+                    # Scroll progressif en plusieurs étapes
+                    total_height = page.evaluate("document.body.scrollHeight")
+                    viewport_height = page.evaluate("window.innerHeight")
+                    current_position = 0
+                    
+                    while current_position < total_height:
+                        # Scroll par petites étapes
+                        scroll_step = min(viewport_height * 0.5, 300)
+                        current_position += scroll_step
+                        page.evaluate(f"window.scrollTo(0, {current_position})")
+                        page.wait_for_timeout(800)  # Attendre entre chaque scroll
+                        
+                        # Recalculer la hauteur totale (peut changer avec le lazy loading)
+                        total_height = page.evaluate("document.body.scrollHeight")
+                    
+                    # Retour en haut pour simuler la lecture complète
+                    page.evaluate("window.scrollTo(0, 0)")
                     page.wait_for_timeout(1000)
-                except:
-                    pass
+                except Exception as e:
+                    print(f"  [ATTENTION] Erreur lors du scroll: {str(e)[:50]}")
+                
+                # Attendre encore un peu après le scroll
+                page.wait_for_timeout(2000)
                 
                 html_content = page.content()
                 
@@ -173,7 +238,7 @@ def extract_title_smart(soup: BeautifulSoup, selectors: list) -> tuple:
 
 def extract_metadata(soup: BeautifulSoup, url: str, title: str, content: str) -> dict:
     """
-    ÉTAPE 3: Extraction et normalisation des métadonnées.
+    ETAPE 3: Extraction et normalisation des metadonnees.
     """
     metadata = {
         "id": None,
@@ -257,7 +322,7 @@ def extract_metadata(soup: BeautifulSoup, url: str, title: str, content: str) ->
 
 def save_normalized_data(metadata: dict, raw_html: str):
     """
-    ÉTAPE 3: Sauvegarde les données normalisées et le HTML brut.
+    ETAPE 3: Sauvegarde les donnees normalisees et le HTML brut.
     """
     os.makedirs(NORMALIZED_DIR, exist_ok=True)
     
@@ -267,7 +332,7 @@ def save_normalized_data(metadata: dict, raw_html: str):
     with open(metadata_filepath, 'w', encoding='utf-8') as f:
         json.dump(metadata, f, ensure_ascii=False, indent=4)
     
-    print(f"  [ÉTAPE 3] Métadonnées normalisées : {metadata_filepath}")
+        print(f"  [ETAPE 3] Metadonnees normalisees : {metadata_filepath}")
     
     raw_filename = f"{metadata['id']}_raw.html"
     raw_filepath = os.path.join(NORMALIZED_DIR, raw_filename)
@@ -283,7 +348,7 @@ def save_normalized_data(metadata: dict, raw_html: str):
         f.write(f"<!-- PROVENANCE: {json.dumps(provenance)} -->\n")
         f.write(raw_html)
     
-    print(f"  [ÉTAPE 3] HTML brut sauvegardé : {raw_filepath}")
+        print(f"  [ETAPE 3] HTML brut sauvegarde : {raw_filepath}")
 
 def fetch_blog_posts():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -304,7 +369,7 @@ def fetch_blog_posts():
         html_content = get_html_and_save_debug(url, debug_filepath)
 
         if not html_content:
-            print(f"  [ÉCHEC] Impossible de récupérer le HTML. Passage au suivant.")
+            print(f"  [ECHEC] Impossible de recuperer le HTML. Passage au suivant.")
             continue
 
         soup = BeautifulSoup(html_content, 'html.parser')
@@ -356,12 +421,12 @@ def fetch_blog_posts():
 
         # ÉTAPE 3: Extraction et normalisation
         if content != "Contenu non trouvé":
-            print(f"  [ÉTAPE 3] Extraction des métadonnées...")
+            print(f"  [ETAPE 3] Extraction des metadonnees...")
             metadata = extract_metadata(soup, url, title, content)
             save_normalized_data(metadata, html_content)
             all_metadata.append(metadata)
         else:
-            print(f"  [ÉTAPE 3] Ignoré - contenu non trouvé")
+            print(f"  [ETAPE 3] Ignore - contenu non trouve")
 
         time.sleep(2)
 
@@ -372,11 +437,11 @@ def fetch_blog_posts():
             json.dump(all_metadata, f, ensure_ascii=False, indent=4)
         
         print(f"\n{'='*60}")
-        print(f"[ÉTAPE 3] Export JSON plat créé : {export_filepath}")
+        print(f"[ETAPE 3] Export JSON plat cree : {export_filepath}")
         print(f"Total de blogs traités : {len(all_metadata)}")
         print('='*60)
     
-    print("\n✅ Collecte des données de blogs terminée.")
+    print("\n[OK] Collecte des donnees de blogs terminee.")
 
 if __name__ == "__main__":
     fetch_blog_posts()

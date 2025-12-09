@@ -1,33 +1,24 @@
-# Fichiers de cache et compilés de Python
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Dossiers d'environnement virtuel
+# Environnement virtuel
 venv/
-.venv/
 env/
-.env/
-ENV/
+.env
 
-# Fichiers de configuration spécifiques à l'IDE
+# IDE
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
 
-# Fichiers de dépendances et de build
-*.egg-info/
-dist/
-build/
-wheels/
-*.egg
+# Données et Modèles (souvent trop lourds pour git)
+# Décommentez si vous voulez les versionner (attention limite 100Mo)
+# models/
+# data/embeddings/
+# data/processed/
 
-# Fichiers de secrets (ne jamais commiter de clés d'API !)
-.env
-*.env.*
-secrets.toml
-
-# Dossiers de données (si les données sont trop volumineuses pour Git)
-data/
+# Fichiers temporaires
+*.log
+*.tmp
+.DS_Store

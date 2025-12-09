@@ -1,0 +1,23 @@
+{
+    "paper_id": "2510.26788v1",
+    "title": "Defeating the Training-Inference Mismatch via FP16",
+    "authors": [
+        "Penghui Qi",
+        "Zichen Liu",
+        "Xiangxin Zhou",
+        "Tianyu Pang",
+        "Chao Du",
+        "Wee Sun Lee",
+        "Min Lin"
+    ],
+    "summary": "Reinforcement learning (RL) fine-tuning of large language models (LLMs) often\nsuffers from instability due to the numerical mismatch between the training and\ninference policies. While prior work has attempted to mitigate this issue\nthrough algorithmic corrections or engineering alignments, we show that its\nroot cause lies in the floating point precision itself. The widely adopted\nBF16, despite its large dynamic range, introduces large rounding errors that\nbreaks the consistency between training and inference. In this work, we\ndemonstrate that simply reverting to \\textbf{FP16} effectively eliminates this\nmismatch. The change is simple, fully supported by modern frameworks with only\na few lines of code change, and requires no modification to the model\narchitecture or learning algorithm. Our results suggest that using FP16\nuniformly yields more stable optimization, faster convergence, and stronger\nperformance across diverse tasks, algorithms and frameworks. We hope these\nfindings motivate a broader reconsideration of precision trade-offs in RL\nfine-tuning.",
+    "published_date": "2025-10-30T17:58:11+00:00",
+    "updated_date": "2025-10-30T17:58:11+00:00",
+    "pdf_url": "http://arxiv.org/pdf/2510.26788v1",
+    "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+    ],
+    "retrieved_at": "2025-10-31T14:31:55.844398"
+}

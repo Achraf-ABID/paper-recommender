@@ -1,0 +1,18 @@
+{
+    "paper_id": "2512.05963v1",
+    "title": "Group Classification (1+2)-dimensional Linear Equation of Asian Options Pricing",
+    "authors": [
+        "Stanislav V. Spichak",
+        "Valeriy I. Stogniy",
+        "Inna M. Kopas"
+    ],
+    "summary": "We consider a class of (1+2)-dimensional linear partial differential of Asian options pricing. Special cases have been used to models of financial mathematics. We carry out group classification of a class equations. In particular, the maximum dimension Lie invariance algebra within the above class is eight-dimensional. It is shown that an equation with such an algebra can be transformed into the linear Kolmogorov equation with the help of the point transformations of variables. Using the operators of invariance algebra symmetry reduction is carried out and invariant exact solutions are constructed for some equations.",
+    "published_date": "2025-12-05T18:57:23+00:00",
+    "updated_date": "2025-12-05T18:57:23+00:00",
+    "pdf_url": "https://arxiv.org/pdf/2512.05963v1",
+    "categories": [
+        "math.AP",
+        "math-ph"
+    ],
+    "retrieved_at": "2025-12-08T22:38:11.263580"
+}
