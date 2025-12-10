@@ -128,9 +128,3 @@ nlp-project/
 
 ---
 
-## 📝 Auteur
-
-**Achraf ABID** - *Ingénieur NLP / Data Scientist*
-
----
-*Projet réalisé dans le cadre d'une recherche sur l'optimisation des LLMs.*
